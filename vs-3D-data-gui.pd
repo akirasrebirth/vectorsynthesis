@@ -1,4 +1,4 @@
-#N canvas 71 23 904 640 10;
+#N canvas 248 411 904 640 10;
 #X text 493 556 Derek Holzer;
 #X text 493 605 macumbista@gmail.com;
 #X text 493 580 Helsinki MAY 2019;
@@ -8,7 +8,7 @@
 #X obj 169 552 outlet~ Y;
 #X obj 307 552 outlet~ B;
 #X obj 177 161 nbx 5 14 -1e+37 1e+37 0 0 \$2/scale \$2/scale scale
-0 -8 0 10 -4034 -1 -1 50 256;
+0 -8 0 10 -4034 -1 -1 25 256;
 #X obj 156 400 / 100;
 #X obj 319 161 nbx 5 14 -1e+37 1e+37 0 0 \$2/brightness \$2/brightness
 brightness 0 -8 0 10 -4034 -1 -1 180 256;
@@ -166,6 +166,7 @@ blanking to remove the flyback line.;
 #X obj 250 325 r \$2/smooth;
 #X obj 250 352 r \$2/source;
 #X obj 250 376 r \$2/interpolation;
+#X obj 375 553 outlet~ P;
 #X connect 7 0 8 0;
 #X connect 7 0 34 1;
 #X connect 8 0 64 0;
@@ -207,6 +208,7 @@ blanking to remove the flyback line.;
 #X connect 39 0 32 1;
 #X connect 40 0 41 0;
 #X connect 41 0 47 0;
+#X connect 41 0 71 0;
 #X connect 42 0 47 4;
 #X connect 47 0 4 0;
 #X connect 47 1 5 0;

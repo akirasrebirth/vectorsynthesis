@@ -1,11 +1,11 @@
-#N canvas 66 23 727 641 10;
+#N canvas 286 524 727 641 10;
 #X obj 101 118 cnv 15 300 80 empty empty empty 20 12 0 14 -228856 -66577
 0;
 #X obj 99 552 outlet~ X;
 #X obj 169 552 outlet~ Y;
 #X obj 307 552 outlet~ B;
 #X obj 178 161 nbx 5 14 -1e+37 1e+37 0 0 \$2/scale \$2/scale scale
-0 -8 0 10 -4034 -1 -1 25 256;
+0 -8 0 10 -4034 -1 -1 19 256;
 #X obj 156 400 / 100;
 #X obj 319 161 nbx 5 14 -1e+37 1e+37 0 0 \$2/brightness \$2/brightness
 brightness 0 -8 0 10 -4034 -1 -1 100 256;
@@ -17,7 +17,7 @@ brightness 0 -8 0 10 -4034 -1 -1 100 256;
 #X obj 377 486 kollabs/ds_reg \$1 \$2/brightness;
 #X obj 102 17 inlet~ phasor;
 #X obj 108 130 nbx 5 14 -1e+37 1e+37 0 0 \$2/frequency \$2/frequency
-frequency 0 -8 0 10 -257985 -1 -1 50 256;
+frequency 0 -8 0 10 -257985 -1 -1 75 256;
 #X obj 168 130 nbx 5 14 -1e+37 1e+37 0 0 \$2/frequency-100 \$2/frequency-100
 freq/100 0 -8 0 10 -257985 -1 -1 0 256;
 #X obj 227 130 bng 15 250 50 0 empty empty Reset -6 -8 0 10 -258113
@@ -90,7 +90,7 @@ freq/100 0 -8 0 10 -257985 -1 -1 0 256;
 #X text 501 605 macumbista@gmail.com;
 #X text 501 580 Helsinki May 2019;
 #X obj 245 181 hradio 15 1 0 2 \$2/interpolation \$2/interpolation
-Off.On 0 -8 0 10 -4034 -1 -1 1;
+Off.On 0 -8 0 10 -4034 -1 -1 0;
 #X text 281 180 INTERPOLATION;
 #X obj 376 181 bng 15 250 50 0 empty empty ? 17 7 0 10 -4032 -1 -1
 ;
@@ -156,6 +156,7 @@ points of the 3D figure ON or OFF. Use interpolation for CRT displays
 #X obj 250 335 r \$2/smooth;
 #X obj 250 362 r \$2/source;
 #X obj 250 386 r \$2/interpolation;
+#X obj 375 553 outlet~ P;
 #X connect 4 0 5 0;
 #X connect 4 0 31 1;
 #X connect 5 0 58 0;
@@ -197,6 +198,7 @@ points of the 3D figure ON or OFF. Use interpolation for CRT displays
 #X connect 36 0 29 1;
 #X connect 37 0 38 0;
 #X connect 38 0 40 0;
+#X connect 38 0 71 0;
 #X connect 40 0 1 0;
 #X connect 40 1 2 0;
 #X connect 40 2 39 0;
